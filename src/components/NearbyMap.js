@@ -79,23 +79,24 @@ class NearbyMap extends Component {
     
     componentWillUnmount() {
         navigator.geolocation.clearWatch(this.watchID);
-    }
+    } 
+
     renderMarkers() {
-         return this.state.burgers.map(burger =>
-             <MapView.Marker 
-             key={burger.id}
-             coordinate={burger.latlng}
-             image={require('../Images/BurgerIcon2.png')}
-             >
-                <MapView.Callout tooltip onPress={() => Linking.openURL(burger.url)}>
-                    <View style={{ width: 230, height: 70, backgroundColor: 'rgba(255, 248, 82, 0.9)', borderColor: '#2c3cff', borderRadius: 5, borderWidth: 1 }}>
-                        <Text style={{ flex: 1 }}>Назив: {burger.title}</Text>
-                        <Text style={{ flex: 1 }}>Работно Време: {burger.open}</Text>
-                        <Text style={{ flex: 1 }}>Опис: {burger.description}</Text>
-                    </View>
-                </MapView.Callout>
-             </MapView.Marker>);
-    }     
+      return this.state.burgers.map(burger =>
+       <MapView.Marker 
+       key={burger.id}
+       coordinate={burger.latlng}
+       image={require('../Images/BurgerIcon2.png')}
+       >
+           <MapView.Callout tooltip onPress={() => Linking.openURL(burger.url)}>
+             <View style={{ width: 230, height: 70, backgroundColor: 'rgba(255, 248, 82, 0.9)', borderColor: '#2c3cff', borderRadius: 5, borderWidth: 1 }}>
+                  <Text style={{ flex: 1 }}>Назив: {burger.title}</Text>
+                  <Text style={{ flex: 1 }}>Работно Време: {burger.open}</Text>
+                  <Text style={{ flex: 1 }}>Опис: {burger.description}</Text>
+              </View>
+           </MapView.Callout>
+       </MapView.Marker>);
+    } 
 
     render() {
         return (
