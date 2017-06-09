@@ -77,11 +77,20 @@ class InitialMap extends Component {
              coordinate={burger.latlng}
              image={require('../Images/BurgerIcon2.png')}
              >
-                <MapView.Callout tooltip onPress={() => Linking.openURL(burger.url)}>
-                    <View style={{ width: 230, height: 70, backgroundColor: 'rgba(255, 248, 82, 0.9)', borderColor: '#2c3cff', borderRadius: 5, borderWidth: 1 }}>
-                        <Text style={{ flex: 1 }}>Назив: {burger.title}</Text>
-                        <Text style={{ flex: 1 }}>Работно Време: {burger.open}</Text>
-                        <Text style={{ flex: 1 }}>Опис: {burger.description}</Text>
+                <MapView.Callout 
+                 tooltip
+                 onPress={() => { 
+                   const url = burger.url;
+                    if (url !== '') {
+                         Linking.openURL(burger.url);
+                    }
+                    return;
+                }}
+                >
+                    <View style={styles.mapCalloutStyle}>
+                        <Text style={styles.calloutTitleStyle}>{burger.title}</Text>
+                        <Text style={styles.calloutWorkHoursStyle}>Работи: {burger.open}</Text>
+                        <Text style={styles.calloutDescriptionStyle}>Опис: {burger.description}</Text>
                     </View>
                 </MapView.Callout>
              </MapView.Marker>);
@@ -91,14 +100,7 @@ class InitialMap extends Component {
         return (
 
             <MapView
-                style={{  
-                    flex: 1,
-                    flexDirection: 'row', 
-                    position: 'relative',
-                    top: 0,
-                    left: 0,
-                    bottom: 0,
-                    right: 0 }}
+                style={styles.mapViewStyle}
                 region={this.state.initialRegion}
             >
                     <MapView.Marker
@@ -111,5 +113,42 @@ class InitialMap extends Component {
         );
     }
 }
+
+const styles = {
+    mapViewStyle: {
+        flex: 1,
+        flexDirection: 'row', 
+        position: 'relative',
+        top: 0,
+        left: 0,
+        bottom: 0,
+        right: 0 
+    },
+    mapCalloutStyle: {
+        width: 230, 
+        height: 70,
+        backgroundColor: 'rgba(255, 248, 82, 0.9)', 
+        borderColor: '#2c3cff', 
+        borderRadius: 5, 
+        borderWidth: 1
+    },
+    calloutTitleStyle: {
+        flex: 1,
+        alignSelf: 'center',
+        fontSize: 16,
+        fontWeight: 'bold',
+        color: '#2c3cff'
+    },
+    calloutWorkHoursStyle: {
+        flex: 1,
+        alignSelf: 'center',
+        color: '#2c3cff'
+    },
+    calloutDescriptionStyle: {
+        flex: 1,
+        alignSelf: 'center',
+        color: '#2c3cff'
+    }
+};
 
 export default InitialMap;

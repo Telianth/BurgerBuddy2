@@ -20,7 +20,7 @@ import LocalImage from './LocalImage';
 const styles = {
   imageContainerStyle: {
       flex: 10,
-      borderBottomWidth: 0
+      borderBottomWidth: 0,
   },
   buttonContainerStyle: {
     borderBottomWidth: 0,

@@ -54,8 +54,7 @@ class NearbyMap extends Component {
             this.setState({ initialPosition: initialRegion });
             this.setState({ markerPosition: initialRegion });
             this.setState({ circleCenter: initialRegion });
-            this.setState({ burgers: data })
-
+            this.setState({ burgers: data });
         }, 
         (error) => alert(JSON.stringify(error), Actions.home({})),
         { enableHighAccuracy: true, timeout: 10000, maximumAge: 1000 });
@@ -70,7 +69,7 @@ class NearbyMap extends Component {
                 latitudeDelta: LATTITUDE_DELTA,
                 longitudeDelta: LONGITUDE_DELTA
             };
-
+ 
             this.setState({ initialPosition: lastRegion });
             this.setState({ markerPosition: lastRegion });
             this.setState({ circleCenter: lastRegion });
@@ -81,6 +80,7 @@ class NearbyMap extends Component {
         navigator.geolocation.clearWatch(this.watchID);
     } 
 
+
     renderMarkers() {
       return this.state.burgers.map(burger =>
        <MapView.Marker 
@@ -88,11 +88,20 @@ class NearbyMap extends Component {
        coordinate={burger.latlng}
        image={require('../Images/BurgerIcon2.png')}
        >
-           <MapView.Callout tooltip onPress={() => Linking.openURL(burger.url)}>
-             <View style={{ width: 230, height: 70, backgroundColor: 'rgba(255, 248, 82, 0.9)', borderColor: '#2c3cff', borderRadius: 5, borderWidth: 1 }}>
-                  <Text style={{ flex: 1 }}>Назив: {burger.title}</Text>
-                  <Text style={{ flex: 1 }}>Работно Време: {burger.open}</Text>
-                  <Text style={{ flex: 1 }}>Опис: {burger.description}</Text>
+           <MapView.Callout 
+           tooltip
+            onPress={() => { 
+                const url = burger.url;
+                if (url !== '') {
+                     Linking.openURL(burger.url);
+                }
+                return;
+               }}
+           >
+             <View style={styles.mapCalloutStyle}>
+                  <Text style={styles.calloutTitleStyle}>{burger.title}</Text>
+                  <Text style={styles.calloutWorkHoursStyle}>Отворено: {burger.open}</Text>
+                  <Text style={styles.calloutDescriptionStyle}>Опис: {burger.description}</Text>
               </View>
            </MapView.Callout>
        </MapView.Marker>);
@@ -101,14 +110,7 @@ class NearbyMap extends Component {
     render() {
         return (
             <MapView
-                style={{  
-                    flex: 1,
-                    flexDirection: 'row', 
-                    position: 'relative',
-                    top: 0,
-                    left: 0,
-                    bottom: 0,
-                    right: 0 }}
+                style={styles.mapViewStyle}
                 region={this.state.initialPosition}
             >
                     <MapView.Circle 
@@ -119,12 +121,49 @@ class NearbyMap extends Component {
                     /> 
                     <MapView.Marker
                     coordinate={this.state.markerPosition}
-                    pinColor='#5c5cff'
+                    pinColor='#2c3cff'
                     />
                    {this.renderMarkers()}
             </MapView>
         );
     }
 }
+
+const styles = {
+    mapViewStyle: {
+        flex: 1,
+        flexDirection: 'row', 
+        position: 'relative',
+        top: 0,
+        left: 0,
+        bottom: 0,
+        right: 0 
+    },
+    mapCalloutStyle: {
+        width: 230, 
+        height: 70,
+        backgroundColor: 'rgba(255, 248, 82, 0.9)', 
+        borderColor: '#2c3cff', 
+        borderRadius: 5, 
+        borderWidth: 1
+    },
+    calloutTitleStyle: {
+        flex: 1,
+        alignSelf: 'center',
+        fontSize: 16,
+        fontWeight: 'bold',
+        color: '#2c3cff'
+    },
+    calloutWorkHoursStyle: {
+        flex: 1,
+        alignSelf: 'center',
+        color: '#2c3cff'
+    },
+    calloutDescriptionStyle: {
+        flex: 1,
+        alignSelf: 'center',
+        color: '#2c3cff'
+    }
+};
 
 export default NearbyMap;
