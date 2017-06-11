@@ -3,6 +3,7 @@ import { Dimensions, View, Text, Linking } from 'react-native';
 import MapView from 'react-native-maps';
 import { Actions } from 'react-native-router-flux';
 import data from '../Database/BurgerList.json';
+import { CardSection } from './common';
 
 const { width, height } = Dimensions.get('window');
 
@@ -17,8 +18,8 @@ class NearbyMap extends Component {
          
          this.state = {
         initialRegion: {
-            latitude: 41.996006,
-            longitude: 21.4292303,
+            latitude: null,
+            longitude: null,
             latitudeDelta: LATTITUDE_DELTA,
             longitudeDelta: LONGITUDE_DELTA
         },
@@ -36,7 +37,6 @@ class NearbyMap extends Component {
     }
 
     watchID: ?number = null;    
-    
 
     componentDidMount() {
         navigator.geolocation.getCurrentPosition((position) => {
@@ -50,13 +50,12 @@ class NearbyMap extends Component {
                 longitudeDelta: LONGITUDE_DELTA
             };
 
-            
+            this.setState({ burgers: data });
             this.setState({ initialPosition: initialRegion });
             this.setState({ markerPosition: initialRegion });
             this.setState({ circleCenter: initialRegion });
-            this.setState({ burgers: data });
         }, 
-        (error) => alert(JSON.stringify(error), Actions.home({})),
+        (error) => alert(JSON.stringify(error), Actions.home({ type: 'reset' })),
         { enableHighAccuracy: true, timeout: 10000, maximumAge: 1000 });
 
         this.watchID = navigator.geolocation.watchPosition((position) => {
@@ -109,6 +108,7 @@ class NearbyMap extends Component {
 
     render() {
         return (
+            <View style={{ flex: 1 }}>
             <MapView
                 style={styles.mapViewStyle}
                 region={this.state.initialPosition}
@@ -125,6 +125,10 @@ class NearbyMap extends Component {
                     />
                    {this.renderMarkers()}
             </MapView>
+            <CardSection style={{ flex: 1, borderBottomWidth: 0, borderColor: '#fff852', borderWidth: 1 }}>
+            <Text style={{ color: '#fff852' }}>Опис</Text>
+            </CardSection>
+            </View>
         );
     }
 }

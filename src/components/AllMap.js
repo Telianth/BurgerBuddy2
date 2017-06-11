@@ -47,7 +47,7 @@ class InitialMap extends Component {
             this.setState({ markerPosition: initialRegion });
             this.setState({ burgers: data });
         }, 
-        (error) => alert(JSON.stringify(error), Actions.home({})),
+        (error) => alert(JSON.stringify(error), Actions.home({ type: 'reset' })),
         { enableHighAccuracy: true, timeout: 7000, maximumAge: 1000 });
 
         this.watchID = navigator.geolocation.watchPosition((position) => {
