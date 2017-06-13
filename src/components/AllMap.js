@@ -32,6 +32,10 @@ class InitialMap extends Component {
 
     watchID: ?number = null;
 
+        componentWillMount() {
+        return this.setState({ burgers: data });
+    }    
+
     componentDidMount() {
         navigator.geolocation.getCurrentPosition((position) => {
             const lat = parseFloat(position.coords.latitude);
@@ -45,7 +49,6 @@ class InitialMap extends Component {
             };
             
             this.setState({ markerPosition: initialRegion });
-            this.setState({ burgers: data });
         }, 
         (error) => alert(JSON.stringify(error), Actions.home({ type: 'reset' })),
         { enableHighAccuracy: true, timeout: 7000, maximumAge: 1000 });
@@ -105,7 +108,7 @@ class InitialMap extends Component {
             >
                     <MapView.Marker
                     coordinate={this.state.markerPosition}
-                    pinColor='#5c5cff'
+                    pinColor='#d8b53e'
                     />
                     
                     {this.renderMarkers()}
@@ -127,8 +130,8 @@ const styles = {
     mapCalloutStyle: {
         width: 230, 
         height: 70,
-        backgroundColor: 'rgba(255, 248, 82, 0.9)', 
-        borderColor: '#2c3cff', 
+        backgroundColor: 'rgba(211, 211, 211, 0.8)', 
+        borderColor: '#c44a2c', 
         borderRadius: 5, 
         borderWidth: 1
     },
@@ -137,17 +140,17 @@ const styles = {
         alignSelf: 'center',
         fontSize: 16,
         fontWeight: 'bold',
-        color: '#2c3cff'
+        color: '#181817'
     },
     calloutWorkHoursStyle: {
         flex: 1,
         alignSelf: 'center',
-        color: '#2c3cff'
+        color: '#181817'
     },
     calloutDescriptionStyle: {
         flex: 1,
         alignSelf: 'center',
-        color: '#2c3cff'
+        color: '#181817'
     }
 };
 

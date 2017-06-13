@@ -6,14 +6,13 @@ import LocalImage from './LocalImage';
 
  const Home = () => (
     <View style={{ flex: 1 }}>
-     <CardSection style={styles.imageContainerStyle}>
-       <LocalImage originalWidth={1588} originalHeight={2246} source={require('../Images/BurgerInitial.png')} />
-     </CardSection>
-     
-     <CardSection style={styles.buttonContainerStyle}>
-        <Button onPress={() => Actions.nearby({})}>Бургери во Близина</Button>
-        <Button onPress={() => Actions.all({})}>Бургери Скопје</Button>
-     </CardSection>
+      <CardSection style={styles.imageContainerStyle}>
+          <LocalImage originalWidth={583} originalHeight={888} source={require('../Images/BurgerInitial.jpg')} />
+      </CardSection>
+      <CardSection style={styles.buttonContainerStyle}>
+          <Button onPress={() => Actions.nearby({})}>Бургери во Близина</Button>
+          <Button onPress={() => Actions.all({})}>Бургери Скопје</Button>
+       </CardSection>
    </View>
   ); 
 
@@ -24,6 +23,8 @@ const styles = {
   },
   buttonContainerStyle: {
     borderBottomWidth: 0,
+    borderTopWidth: 1,
+    borderColor: '#888',
     flex: 1
   }
 };

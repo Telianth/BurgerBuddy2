@@ -62,5 +62,69 @@
     "open": "Пон-Нед, 10-03",
     "description": "Бургери со лесковачки",
     "url" : "https://www.facebook.com/%D0%9B%D0%B5%D1%81%D0%BA%D0%BE%D0%B2%D0%B0%D1%87%D0%BA%D0%B0-%D1%81%D0%BA%D0%B0%D1%80%D0%B0-%D0%BA%D0%B0%D1%98-%D0%92%D0%B8%D0%BB%D0%B8-127224117289325/"
+  },
+  {
+    "latlng": {"latitude": 42.006633, "longitude": 21.356255},
+    "id": 8,
+    "title": "Лорем Ипсум",
+    "open": "Лорем Ипсум",
+    "description": "Лорем Ипсум",
+    "url" : ""
+  },
+   {
+    "latlng": {"latitude": 42.006633, "longitude": 21.356255},
+    "id": 9,
+    "title": "Лорем Ипсум",
+    "open": "Лорем Ипсум",
+    "description": "Лорем Ипсум",
+    "url" : ""
+  },
+   {
+    "latlng": {"latitude": 42.006633, "longitude": 21.356255},
+    "id": 10,
+    "title": "Лорем Ипсум",
+    "open": "Лорем Ипсум",
+    "description": "Лорем Ипсум",
+    "url" : ""
+  },
+   {
+    "latlng": {"latitude": 42.006633, "longitude": 21.356255},
+    "id": 11,
+    "title": "Лорем Ипсум",
+    "open": "Лорем Ипсум",
+    "description": "Лорем Ипсум",
+    "url" : ""
+  },
+   {
+    "latlng": {"latitude": 42.006633, "longitude": 21.356255},
+    "id": 12,
+    "title": "Лорем Ипсум",
+    "open": "Лорем Ипсум",
+    "description": "Лорем Ипсум",
+    "url" : ""
+  },
+   {
+    "latlng": {"latitude": 42.006633, "longitude": 21.356255},
+    "id": 13,
+    "title": "Лорем Ипсум",
+    "open": "Лорем Ипсум",
+    "description": "Лорем Ипсум",
+    "url" : ""
+  },
+   {
+    "latlng": {"latitude": 42.006633, "longitude": 21.356255},
+    "id": 14,
+    "title": "Лорем Ипсум",
+    "open": "Лорем Ипсум",
+    "description": "Лорем Ипсум",
+    "url" : ""
+  },
+   {
+    "latlng": {"latitude": 42.006633, "longitude": 21.356255},
+    "id": 15,
+    "title": "Лорем Ипсум",
+    "open": "Лорем Ипсум",
+    "description": "Лорем Ипсум",
+    "url" : ""
   }
 ]

@@ -28,15 +28,20 @@ class NearbyMap extends Component {
             longitude: 0
         },
 
-         circleCenter: {
-                latitude: 0,
-                longitude: 0
-            },
-         burgers: []   
+        circleCenter: {
+            latitude: 0,
+            longitude: 0
+        },
+         burgers: []
+
     };
     }
 
-    watchID: ?number = null;    
+    watchID: ?number = null;
+
+    componentWillMount() {
+        return this.setState({ burgers: data });
+    }    
 
     componentDidMount() {
         navigator.geolocation.getCurrentPosition((position) => {
@@ -50,7 +55,6 @@ class NearbyMap extends Component {
                 longitudeDelta: LONGITUDE_DELTA
             };
 
-            this.setState({ burgers: data });
             this.setState({ initialPosition: initialRegion });
             this.setState({ markerPosition: initialRegion });
             this.setState({ circleCenter: initialRegion });
@@ -82,7 +86,7 @@ class NearbyMap extends Component {
 
     renderMarkers() {
       return this.state.burgers.map(burger =>
-       <MapView.Marker 
+       <MapView.Marker
        key={burger.id}
        coordinate={burger.latlng}
        image={require('../Images/BurgerIcon2.png')}
@@ -116,17 +120,17 @@ class NearbyMap extends Component {
                     <MapView.Circle 
                     center={this.state.circleCenter} 
                     radius={1000} strokeWidth={1} 
-                    fillColor='rgba(255, 248, 82, 0.3)' 
-                    strokeColor='#2c3cff'
+                    fillColor='rgba(211, 211, 211, 0.4)' 
+                    strokeColor='#c44a2c'
                     /> 
                     <MapView.Marker
                     coordinate={this.state.markerPosition}
-                    pinColor='#2c3cff'
+                    pinColor='#d8b53e'
                     />
                    {this.renderMarkers()}
             </MapView>
-            <CardSection style={{ flex: 1, borderBottomWidth: 0, borderColor: '#fff852', borderWidth: 1 }}>
-            <Text style={{ color: '#fff852' }}>Опис</Text>
+            <CardSection style={{ flex: 1, borderBottomWidth: 0, borderColor: '#181817', borderTopWidth: 1 }}>
+            <Text style={{ color: '#181817' }}>Опис</Text>
             </CardSection>
             </View>
         );
@@ -146,8 +150,8 @@ const styles = {
     mapCalloutStyle: {
         width: 230, 
         height: 70,
-        backgroundColor: 'rgba(255, 248, 82, 0.9)', 
-        borderColor: '#2c3cff', 
+        backgroundColor: 'rgba(211, 211, 211, 0.8)', 
+        borderColor: '#c44a2c', 
         borderRadius: 5, 
         borderWidth: 1
     },
@@ -156,17 +160,17 @@ const styles = {
         alignSelf: 'center',
         fontSize: 16,
         fontWeight: 'bold',
-        color: '#2c3cff'
+        color: '#181817'
     },
     calloutWorkHoursStyle: {
         flex: 1,
         alignSelf: 'center',
-        color: '#2c3cff'
+        color: '#181817'
     },
     calloutDescriptionStyle: {
         flex: 1,
         alignSelf: 'center',
-        color: '#2c3cff'
+        color: '#181817'
     }
 };
 
