@@ -12,8 +12,8 @@ const RouterComponent = () => (
          titleStyle={{ color: '#181817' }}
         >
             <Scene key='home' component={Home} title='Бургер Другарче' />
-            <Scene key='nearby' component={NearbyMap} title='Бургери во Близина' />
-            <Scene key='all' component={AllMap} title='Бургери Скопје' />
+            <Scene key='nearby' component={NearbyMap} title='Бургери во Близина' backButtonImage={require('../Images/left-arrow.png')} />
+            <Scene key='all' component={AllMap} title='Бургери Скопје' backButtonImage={require('../Images/left-arrow.png')} />
         </Router>
     );
 

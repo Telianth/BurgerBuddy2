@@ -3,7 +3,6 @@ import { Dimensions, View, Text, Linking } from 'react-native';
 import MapView from 'react-native-maps';
 import { Actions } from 'react-native-router-flux';
 import data from '../Database/BurgerList.json';
-import { CardSection } from './common';
 
 const { width, height } = Dimensions.get('window');
 
@@ -13,10 +12,7 @@ const LATTITUDE_DELTA = 0.0322;
 const LONGITUDE_DELTA = LATTITUDE_DELTA * ASPECT_RATIO;
 
 class NearbyMap extends Component {
-    constructor(props) {
-        super(props); 
-         
-         this.state = {
+    state = {
         initialRegion: {
             latitude: null,
             longitude: null,
@@ -35,7 +31,6 @@ class NearbyMap extends Component {
          burgers: []
 
     };
-    }
 
     watchID: ?number = null;
 
@@ -129,9 +124,6 @@ class NearbyMap extends Component {
                     />
                    {this.renderMarkers()}
             </MapView>
-            <CardSection style={{ flex: 1, borderBottomWidth: 0, borderColor: '#181817', borderTopWidth: 1 }}>
-            <Text style={{ color: '#181817' }}>Опис</Text>
-            </CardSection>
             </View>
         );
     }

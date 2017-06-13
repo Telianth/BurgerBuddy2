@@ -12,10 +12,7 @@ const LATTITUDE_DELTA = 0.2092;
 const LONGITUDE_DELTA = LATTITUDE_DELTA * ASPECT_RATIO;
 
 class InitialMap extends Component {
-    constructor(props) {
-        super(props); 
-         
-         this.state = {
+    state = {
         initialRegion: {
             latitude: 41.9960995,
             longitude: 21.4303442,
@@ -28,7 +25,6 @@ class InitialMap extends Component {
         },
         burgers: []
     };
-    }
 
     watchID: ?number = null;
 
