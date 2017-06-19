@@ -20,6 +20,7 @@ const styles = {
   imageContainerStyle: {
       flex: 10,
       borderBottomWidth: 0,
+      alignSelf: 'center',
   },
   buttonContainerStyle: {
     borderBottomWidth: 0,

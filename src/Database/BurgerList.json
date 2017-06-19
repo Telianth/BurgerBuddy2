@@ -64,12 +64,18 @@
     "url" : "https://www.facebook.com/%D0%9B%D0%B5%D1%81%D0%BA%D0%BE%D0%B2%D0%B0%D1%87%D0%BA%D0%B0-%D1%81%D0%BA%D0%B0%D1%80%D0%B0-%D0%BA%D0%B0%D1%98-%D0%92%D0%B8%D0%BB%D0%B8-127224117289325/"
   },
   {
-    "latlng": {"latitude": 42.006633, "longitude": 21.356255},
+    "latlng": {"latitude": 42.0030411, "longitude": 21.4167088},
     "id": 8,
-    "title": "Лорем Ипсум",
-    "open": "Лорем Ипсум",
-    "description": "Лорем Ипсум",
-    "url" : ""
+    "title": "Ројал Бургер 2",
+    "open": "Пон-Нед, 09-01",
+    "description": "Највкусните Пилешки Бургери",
+    "url" : "https://www.facebook.com/pages/Royal-Burger-Debar-Maalo/245501522306945",
+    "menu": [{ "menuID": 0, "itemName": "Crispy Chicken", "itemPrice": 100}, { "menuID": 1, "itemName": "Cheese Chicken", "itemPrice": 110},
+    { "menuID": 2, "itemName": "Bacon Chicken", "itemPrice": 120}, { "menuID": 3, "itemName": "Spicy Chicken", "itemPrice": 100}, 
+    { "menuID": 4, "itemName": "Royal Chicken", "itemPrice": 145}, { "menuID": 5, "itemName": "Chicken Burger", "itemPrice": 110}, 
+    { "menuID": 6, "itemName": "Hamburger", "itemPrice": 100}, { "menuID": 7, "itemName": "Cheeseburger", "itemPrice": 110}, 
+    { "menuID": 8, "itemName": "Bacon Burger", "itemPrice": 120}, { "menuID": 9, "itemName": "Doubleburger", "itemPrice": 150}, 
+    { "menuID": 10, "itemName": "RoyalBurger", "itemPrice": 145}]
   },
    {
     "latlng": {"latitude": 42.006633, "longitude": 21.356255},

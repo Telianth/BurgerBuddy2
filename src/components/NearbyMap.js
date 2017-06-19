@@ -88,13 +88,7 @@ class NearbyMap extends Component {
        >
            <MapView.Callout 
            tooltip
-            onPress={() => { 
-                const url = burger.url;
-                if (url !== '') {
-                     Linking.openURL(burger.url);
-                }
-                return;
-               }}
+            onPress={() => Actions.burgerplace({ burger, title: burger.title })}
            >
              <View style={styles.mapCalloutStyle}>
                   <Text style={styles.calloutTitleStyle}>{burger.title}</Text>
