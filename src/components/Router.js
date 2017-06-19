@@ -8,7 +8,7 @@ import BurgerPlace from './BurgerPlace';
 const RouterComponent = () => (
 
         <Router
-         sceneStyle={{ paddingTop: 50 }}
+         sceneStyle={{ paddingTop: 50, backgroundColor: '#d3d3d3' }}
          navigationBarStyle={{ backgroundColor: '#d3d3d3' }}
          titleStyle={{ color: '#181817' }}
         >
