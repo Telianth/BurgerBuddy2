@@ -17,20 +17,23 @@ const RouterComponent = () => (
             key='nearby' 
             component={NearbyMap} 
             title='Бургери во Близина' 
-            backButtonImage={require('../Images/left-arrow.png')} 
+            backButtonImage={require('../Images/left-arrow.png')}
+            panHandlers={null} 
             />
             <Scene 
             key='all' 
             component={AllMap} 
             title='Бургери Скопје' 
-            backButtonImage={require('../Images/left-arrow.png')} 
+            backButtonImage={require('../Images/left-arrow.png')}
+            panHandlers={null} 
             />
             <Scene 
             key='burgerplace' 
             component={BurgerPlace} 
             getTitle={(props) => props.title} 
             backButtonImage={require('../Images/left-arrow.png')} 
-            direction='vertical' 
+            direction='vertical'
+            panHandlers={null}
             />
         </Router>
     );

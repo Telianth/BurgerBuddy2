@@ -5,7 +5,12 @@
     "title": "Сендвичара Наздравје",
     "open": "Пон-Пет, 07-19",
     "description": "Најевтините бургери",
-    "url" : ""
+    "url" : "",
+    "menu": [{ "menuID": 0, "itemName": "Хамбургер", "itemPrice": 60}, { "menuID": 1, "itemName": "Чизбургер", "itemPrice": 80},
+    { "menuID": 2, "itemName": "Хамбургер Наздравје", "itemPrice": 100}, { "menuID": 3, "itemName": "Хамбургер со Шарска", "itemPrice": 120}, 
+    { "menuID": 4, "itemName": "Сендвич со 1 Плескавица", "itemPrice": 50}, { "menuID": 5, "itemName": "Сендвич со Стек", "itemPrice": 60}, 
+    { "menuID": 6, "itemName": "Комбиниран Сендвич", "itemPrice": 60}, { "menuID": 7, "itemName": "Тост со Печурки", "itemPrice": 60}, 
+    { "menuID": 8, "itemName": "Сендвич со 2 Плескавици", "itemPrice": 90}]
   },
   {
     "latlng": {"latitude": 42.0062822, "longitude": 21.3515972},
@@ -13,7 +18,13 @@
     "title": "Донер Стара Петка",
     "open": "Пон-Саб, 09-23",
     "description": "Донерот во Ѓорче",
-    "url" : ""
+    "url" : "",
+    "menu": [{ "menuID": 0, "itemName": "Crispy Chicken", "itemPrice": 100}, { "menuID": 1, "itemName": "Cheese Chicken", "itemPrice": 110},
+    { "menuID": 2, "itemName": "Bacon Chicken", "itemPrice": 120}, { "menuID": 3, "itemName": "Spicy Chicken", "itemPrice": 100}, 
+    { "menuID": 4, "itemName": "Royal Chicken", "itemPrice": 145}, { "menuID": 5, "itemName": "Chicken Burger", "itemPrice": 110}, 
+    { "menuID": 6, "itemName": "Hamburger", "itemPrice": 100}, { "menuID": 7, "itemName": "Cheese Burger", "itemPrice": 110}, 
+    { "menuID": 8, "itemName": "Bacon Burger", "itemPrice": 120}, { "menuID": 9, "itemName": "Double Burger", "itemPrice": 150}, 
+    { "menuID": 10, "itemName": "Royal Burger", "itemPrice": 145}]
   },
   {
     "latlng": {"latitude": 42.006812, "longitude": 21.361217},
@@ -21,7 +32,13 @@
     "title": "99",
     "open": "Пон-Саб, 10-23",
     "description": "Тостовите, брат!",
-    "url" : ""
+    "url" : "",
+    "menu": [{ "menuID": 0, "itemName": "Crispy Chicken", "itemPrice": 100}, { "menuID": 1, "itemName": "Cheese Chicken", "itemPrice": 110},
+    { "menuID": 2, "itemName": "Bacon Chicken", "itemPrice": 120}, { "menuID": 3, "itemName": "Spicy Chicken", "itemPrice": 100}, 
+    { "menuID": 4, "itemName": "Royal Chicken", "itemPrice": 145}, { "menuID": 5, "itemName": "Chicken Burger", "itemPrice": 110}, 
+    { "menuID": 6, "itemName": "Hamburger", "itemPrice": 100}, { "menuID": 7, "itemName": "Cheese Burger", "itemPrice": 110}, 
+    { "menuID": 8, "itemName": "Bacon Burger", "itemPrice": 120}, { "menuID": 9, "itemName": "Double Burger", "itemPrice": 150}, 
+    { "menuID": 10, "itemName": "Royal Burger", "itemPrice": 145}]
   },
   {
     "latlng": {"latitude": 42.006633, "longitude": 21.356255},
@@ -29,7 +46,13 @@
     "title": "Лорем Ипсум",
     "open": "Лорем Ипсум",
     "description": "Лорем Ипсум",
-    "url" : ""
+    "url" : "",
+    "menu": [{ "menuID": 0, "itemName": "Crispy Chicken", "itemPrice": 100}, { "menuID": 1, "itemName": "Cheese Chicken", "itemPrice": 110},
+    { "menuID": 2, "itemName": "Bacon Chicken", "itemPrice": 120}, { "menuID": 3, "itemName": "Spicy Chicken", "itemPrice": 100}, 
+    { "menuID": 4, "itemName": "Royal Chicken", "itemPrice": 145}, { "menuID": 5, "itemName": "Chicken Burger", "itemPrice": 110}, 
+    { "menuID": 6, "itemName": "Hamburger", "itemPrice": 100}, { "menuID": 7, "itemName": "Cheese Burger", "itemPrice": 110}, 
+    { "menuID": 8, "itemName": "Bacon Burger", "itemPrice": 120}, { "menuID": 9, "itemName": "Double Burger", "itemPrice": 150}, 
+    { "menuID": 10, "itemName": "Royal Burger", "itemPrice": 145}]
   },
   {
     "latlng": {"latitude": 42.007947, "longitude": 21.369826},
@@ -37,7 +60,13 @@
     "title": "Ил Портико",
     "open": "Пон-Саб, 08-00",
     "description": "Вкусни бургери во Влае",
-    "url" : "https://www.facebook.com/IL-PORTICO-213519458983926/"
+    "url" : "https://www.facebook.com/IL-PORTICO-213519458983926/",
+    "menu": [{ "menuID": 0, "itemName": "Crispy Chicken", "itemPrice": 100}, { "menuID": 1, "itemName": "Cheese Chicken", "itemPrice": 110},
+    { "menuID": 2, "itemName": "Bacon Chicken", "itemPrice": 120}, { "menuID": 3, "itemName": "Spicy Chicken", "itemPrice": 100}, 
+    { "menuID": 4, "itemName": "Royal Chicken", "itemPrice": 145}, { "menuID": 5, "itemName": "Chicken Burger", "itemPrice": 110}, 
+    { "menuID": 6, "itemName": "Hamburger", "itemPrice": 100}, { "menuID": 7, "itemName": "Cheese Burger", "itemPrice": 110}, 
+    { "menuID": 8, "itemName": "Bacon Burger", "itemPrice": 120}, { "menuID": 9, "itemName": "Double Burger", "itemPrice": 150}, 
+    { "menuID": 10, "itemName": "Royal Burger", "itemPrice": 145}]
   },
   {
     "latlng": {"latitude": 42.001030, "longitude": 21.390040},
@@ -45,7 +74,13 @@
     "title": "Вили Тафталиџе",
     "open": "Пон-Нед, 10-03",
     "description": "Бургери со лесковачки",
-    "url" : "https://www.facebook.com/%D0%9B%D0%B5%D1%81%D0%BA%D0%BE%D0%B2%D0%B0%D1%87%D0%BA%D0%B0-%D1%81%D0%BA%D0%B0%D1%80%D0%B0-%D0%BA%D0%B0%D1%98-%D0%92%D0%B8%D0%BB%D0%B8-127224117289325/"
+    "url" : "https://www.facebook.com/%D0%9B%D0%B5%D1%81%D0%BA%D0%BE%D0%B2%D0%B0%D1%87%D0%BA%D0%B0-%D1%81%D0%BA%D0%B0%D1%80%D0%B0-%D0%BA%D0%B0%D1%98-%D0%92%D0%B8%D0%BB%D0%B8-127224117289325/",
+    "menu": [{ "menuID": 0, "itemName": "Crispy Chicken", "itemPrice": 100}, { "menuID": 1, "itemName": "Cheese Chicken", "itemPrice": 110},
+    { "menuID": 2, "itemName": "Bacon Chicken", "itemPrice": 120}, { "menuID": 3, "itemName": "Spicy Chicken", "itemPrice": 100}, 
+    { "menuID": 4, "itemName": "Royal Chicken", "itemPrice": 145}, { "menuID": 5, "itemName": "Chicken Burger", "itemPrice": 110}, 
+    { "menuID": 6, "itemName": "Hamburger", "itemPrice": 100}, { "menuID": 7, "itemName": "Cheese Burger", "itemPrice": 110}, 
+    { "menuID": 8, "itemName": "Bacon Burger", "itemPrice": 120}, { "menuID": 9, "itemName": "Double Burger", "itemPrice": 150}, 
+    { "menuID": 10, "itemName": "Royal Burger", "itemPrice": 145}]
   },
   {
     "latlng": {"latitude": 41.998055, "longitude": 21.423958},
@@ -53,7 +88,13 @@
     "title": "Порта Паб",
     "open": "Пон-Саб, 09-00",
     "description": "Вкусни гурмански бургери",
-    "url" : "https://www.facebook.com/pages/%D0%9F%D0%B0%D0%B1-%D0%9F%D0%BE%D1%80%D1%82%D0%B0/203299179693529"
+    "url" : "https://www.facebook.com/pages/%D0%9F%D0%B0%D0%B1-%D0%9F%D0%BE%D1%80%D1%82%D0%B0/203299179693529",
+    "menu": [{ "menuID": 0, "itemName": "Crispy Chicken", "itemPrice": 100}, { "menuID": 1, "itemName": "Cheese Chicken", "itemPrice": 110},
+    { "menuID": 2, "itemName": "Bacon Chicken", "itemPrice": 120}, { "menuID": 3, "itemName": "Spicy Chicken", "itemPrice": 100}, 
+    { "menuID": 4, "itemName": "Royal Chicken", "itemPrice": 145}, { "menuID": 5, "itemName": "Chicken Burger", "itemPrice": 110}, 
+    { "menuID": 6, "itemName": "Hamburger", "itemPrice": 100}, { "menuID": 7, "itemName": "Cheese Burger", "itemPrice": 110}, 
+    { "menuID": 8, "itemName": "Bacon Burger", "itemPrice": 120}, { "menuID": 9, "itemName": "Double Burger", "itemPrice": 150}, 
+    { "menuID": 10, "itemName": "Royal Burger", "itemPrice": 145}]
   },
   {
     "latlng": {"latitude": 42.001509, "longitude": 21.405930},
@@ -73,9 +114,9 @@
     "menu": [{ "menuID": 0, "itemName": "Crispy Chicken", "itemPrice": 100}, { "menuID": 1, "itemName": "Cheese Chicken", "itemPrice": 110},
     { "menuID": 2, "itemName": "Bacon Chicken", "itemPrice": 120}, { "menuID": 3, "itemName": "Spicy Chicken", "itemPrice": 100}, 
     { "menuID": 4, "itemName": "Royal Chicken", "itemPrice": 145}, { "menuID": 5, "itemName": "Chicken Burger", "itemPrice": 110}, 
-    { "menuID": 6, "itemName": "Hamburger", "itemPrice": 100}, { "menuID": 7, "itemName": "Cheeseburger", "itemPrice": 110}, 
-    { "menuID": 8, "itemName": "Bacon Burger", "itemPrice": 120}, { "menuID": 9, "itemName": "Doubleburger", "itemPrice": 150}, 
-    { "menuID": 10, "itemName": "RoyalBurger", "itemPrice": 145}]
+    { "menuID": 6, "itemName": "Hamburger", "itemPrice": 100}, { "menuID": 7, "itemName": "Cheese Burger", "itemPrice": 110}, 
+    { "menuID": 8, "itemName": "Bacon Burger", "itemPrice": 120}, { "menuID": 9, "itemName": "Double Burger", "itemPrice": 150}, 
+    { "menuID": 10, "itemName": "Royal Burger", "itemPrice": 145}]
   },
    {
     "latlng": {"latitude": 42.006633, "longitude": 21.356255},
@@ -83,7 +124,13 @@
     "title": "Лорем Ипсум",
     "open": "Лорем Ипсум",
     "description": "Лорем Ипсум",
-    "url" : ""
+    "url" : "",
+    "menu": [{ "menuID": 0, "itemName": "Crispy Chicken", "itemPrice": 100}, { "menuID": 1, "itemName": "Cheese Chicken", "itemPrice": 110},
+    { "menuID": 2, "itemName": "Bacon Chicken", "itemPrice": 120}, { "menuID": 3, "itemName": "Spicy Chicken", "itemPrice": 100}, 
+    { "menuID": 4, "itemName": "Royal Chicken", "itemPrice": 145}, { "menuID": 5, "itemName": "Chicken Burger", "itemPrice": 110}, 
+    { "menuID": 6, "itemName": "Hamburger", "itemPrice": 100}, { "menuID": 7, "itemName": "Cheese Burger", "itemPrice": 110}, 
+    { "menuID": 8, "itemName": "Bacon Burger", "itemPrice": 120}, { "menuID": 9, "itemName": "Double Burger", "itemPrice": 150}, 
+    { "menuID": 10, "itemName": "Royal Burger", "itemPrice": 145}]
   },
    {
     "latlng": {"latitude": 42.006633, "longitude": 21.356255},
@@ -91,7 +138,13 @@
     "title": "Лорем Ипсум",
     "open": "Лорем Ипсум",
     "description": "Лорем Ипсум",
-    "url" : ""
+    "url" : "",
+    "menu": [{ "menuID": 0, "itemName": "Crispy Chicken", "itemPrice": 100}, { "menuID": 1, "itemName": "Cheese Chicken", "itemPrice": 110},
+    { "menuID": 2, "itemName": "Bacon Chicken", "itemPrice": 120}, { "menuID": 3, "itemName": "Spicy Chicken", "itemPrice": 100}, 
+    { "menuID": 4, "itemName": "Royal Chicken", "itemPrice": 145}, { "menuID": 5, "itemName": "Chicken Burger", "itemPrice": 110}, 
+    { "menuID": 6, "itemName": "Hamburger", "itemPrice": 100}, { "menuID": 7, "itemName": "Cheese Burger", "itemPrice": 110}, 
+    { "menuID": 8, "itemName": "Bacon Burger", "itemPrice": 120}, { "menuID": 9, "itemName": "Double Burger", "itemPrice": 150}, 
+    { "menuID": 10, "itemName": "Royal Burger", "itemPrice": 145}]
   },
    {
     "latlng": {"latitude": 42.006633, "longitude": 21.356255},
@@ -99,7 +152,13 @@
     "title": "Лорем Ипсум",
     "open": "Лорем Ипсум",
     "description": "Лорем Ипсум",
-    "url" : ""
+    "url" : "",
+    "menu": [{ "menuID": 0, "itemName": "Crispy Chicken", "itemPrice": 100}, { "menuID": 1, "itemName": "Cheese Chicken", "itemPrice": 110},
+    { "menuID": 2, "itemName": "Bacon Chicken", "itemPrice": 120}, { "menuID": 3, "itemName": "Spicy Chicken", "itemPrice": 100}, 
+    { "menuID": 4, "itemName": "Royal Chicken", "itemPrice": 145}, { "menuID": 5, "itemName": "Chicken Burger", "itemPrice": 110}, 
+    { "menuID": 6, "itemName": "Hamburger", "itemPrice": 100}, { "menuID": 7, "itemName": "Cheese Burger", "itemPrice": 110}, 
+    { "menuID": 8, "itemName": "Bacon Burger", "itemPrice": 120}, { "menuID": 9, "itemName": "Double Burger", "itemPrice": 150}, 
+    { "menuID": 10, "itemName": "Royal Burger", "itemPrice": 145}]
   },
    {
     "latlng": {"latitude": 42.006633, "longitude": 21.356255},
@@ -107,7 +166,13 @@
     "title": "Лорем Ипсум",
     "open": "Лорем Ипсум",
     "description": "Лорем Ипсум",
-    "url" : ""
+    "url" : "",
+    "menu": [{ "menuID": 0, "itemName": "Crispy Chicken", "itemPrice": 100}, { "menuID": 1, "itemName": "Cheese Chicken", "itemPrice": 110},
+    { "menuID": 2, "itemName": "Bacon Chicken", "itemPrice": 120}, { "menuID": 3, "itemName": "Spicy Chicken", "itemPrice": 100}, 
+    { "menuID": 4, "itemName": "Royal Chicken", "itemPrice": 145}, { "menuID": 5, "itemName": "Chicken Burger", "itemPrice": 110}, 
+    { "menuID": 6, "itemName": "Hamburger", "itemPrice": 100}, { "menuID": 7, "itemName": "Cheese Burger", "itemPrice": 110}, 
+    { "menuID": 8, "itemName": "Bacon Burger", "itemPrice": 120}, { "menuID": 9, "itemName": "Double Burger", "itemPrice": 150}, 
+    { "menuID": 10, "itemName": "Royal Burger", "itemPrice": 145}]
   },
    {
     "latlng": {"latitude": 42.006633, "longitude": 21.356255},
@@ -115,7 +180,13 @@
     "title": "Лорем Ипсум",
     "open": "Лорем Ипсум",
     "description": "Лорем Ипсум",
-    "url" : ""
+    "url" : "",
+    "menu": [{ "menuID": 0, "itemName": "Crispy Chicken", "itemPrice": 100}, { "menuID": 1, "itemName": "Cheese Chicken", "itemPrice": 110},
+    { "menuID": 2, "itemName": "Bacon Chicken", "itemPrice": 120}, { "menuID": 3, "itemName": "Spicy Chicken", "itemPrice": 100}, 
+    { "menuID": 4, "itemName": "Royal Chicken", "itemPrice": 145}, { "menuID": 5, "itemName": "Chicken Burger", "itemPrice": 110}, 
+    { "menuID": 6, "itemName": "Hamburger", "itemPrice": 100}, { "menuID": 7, "itemName": "Cheese Burger", "itemPrice": 110}, 
+    { "menuID": 8, "itemName": "Bacon Burger", "itemPrice": 120}, { "menuID": 9, "itemName": "Double Burger", "itemPrice": 150}, 
+    { "menuID": 10, "itemName": "Royal Burger", "itemPrice": 145}]
   },
    {
     "latlng": {"latitude": 42.006633, "longitude": 21.356255},
@@ -123,7 +194,13 @@
     "title": "Лорем Ипсум",
     "open": "Лорем Ипсум",
     "description": "Лорем Ипсум",
-    "url" : ""
+    "url" : "",
+    "menu": [{ "menuID": 0, "itemName": "Crispy Chicken", "itemPrice": 100}, { "menuID": 1, "itemName": "Cheese Chicken", "itemPrice": 110},
+    { "menuID": 2, "itemName": "Bacon Chicken", "itemPrice": 120}, { "menuID": 3, "itemName": "Spicy Chicken", "itemPrice": 100}, 
+    { "menuID": 4, "itemName": "Royal Chicken", "itemPrice": 145}, { "menuID": 5, "itemName": "Chicken Burger", "itemPrice": 110}, 
+    { "menuID": 6, "itemName": "Hamburger", "itemPrice": 100}, { "menuID": 7, "itemName": "Cheese Burger", "itemPrice": 110}, 
+    { "menuID": 8, "itemName": "Bacon Burger", "itemPrice": 120}, { "menuID": 9, "itemName": "Double Burger", "itemPrice": 150}, 
+    { "menuID": 10, "itemName": "Royal Burger", "itemPrice": 145}]
   },
    {
     "latlng": {"latitude": 42.006633, "longitude": 21.356255},
@@ -131,6 +208,12 @@
     "title": "Лорем Ипсум",
     "open": "Лорем Ипсум",
     "description": "Лорем Ипсум",
-    "url" : ""
+    "url" : "",
+    "menu": [{ "menuID": 0, "itemName": "Crispy Chicken", "itemPrice": 100}, { "menuID": 1, "itemName": "Cheese Chicken", "itemPrice": 110},
+    { "menuID": 2, "itemName": "Bacon Chicken", "itemPrice": 120}, { "menuID": 3, "itemName": "Spicy Chicken", "itemPrice": 100}, 
+    { "menuID": 4, "itemName": "Royal Chicken", "itemPrice": 145}, { "menuID": 5, "itemName": "Chicken Burger", "itemPrice": 110}, 
+    { "menuID": 6, "itemName": "Hamburger", "itemPrice": 100}, { "menuID": 7, "itemName": "Cheese Burger", "itemPrice": 110}, 
+    { "menuID": 8, "itemName": "Bacon Burger", "itemPrice": 120}, { "menuID": 9, "itemName": "Double Burger", "itemPrice": 150}, 
+    { "menuID": 10, "itemName": "Royal Burger", "itemPrice": 145}]
   }
 ]
