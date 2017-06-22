@@ -12,7 +12,12 @@ const RouterComponent = () => (
          navigationBarStyle={{ backgroundColor: '#d3d3d3' }}
          titleStyle={{ color: '#181817' }}
         >
-            <Scene key='home' component={Home} title='Бургер Другарче' />
+            <Scene
+            initial
+            key='home' 
+            component={Home} 
+            title='Бургер Другарче' 
+            />
             <Scene 
             key='nearby' 
             component={NearbyMap} 

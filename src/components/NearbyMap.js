@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Dimensions, View, Text, Linking } from 'react-native';
+import { Dimensions, View, Text, } from 'react-native';
 import MapView from 'react-native-maps';
 import { Actions } from 'react-native-router-flux';
 import data from '../Database/BurgerList.json';
@@ -150,12 +150,12 @@ const styles = {
     },
     calloutWorkHoursStyle: {
         flex: 1,
-        alignSelf: 'center',
+        paddingLeft: 5,
         color: '#181817'
     },
     calloutDescriptionStyle: {
         flex: 1,
-        alignSelf: 'center',
+        paddingLeft: 5,        
         color: '#181817'
     }
 };
