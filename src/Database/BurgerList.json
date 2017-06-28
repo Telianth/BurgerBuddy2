@@ -332,17 +332,17 @@
     "description": "Лорем Ипсум",
     "url" : "",
     "menu":  [
-    { "menuID": 0, "itemName": "Crispy Chicken", "itemIngredients": "()", "itemPrice": 100}, 
-    { "menuID": 1, "itemName": "Cheese Chicken", "itemIngredients": "()", "itemPrice": 110},
-    { "menuID": 2, "itemName": "Bacon Chicken", "itemIngredients": "()", "itemPrice": 120}, 
-    { "menuID": 3, "itemName": "Spicy Chicken", "itemIngredients": "()", "itemPrice": 100}, 
-    { "menuID": 4, "itemName": "Royal Chicken", "itemIngredients": "()", "itemPrice": 145}, 
-    { "menuID": 5, "itemName": "Chicken Burger", "itemIngredients": "()", "itemPrice": 110}, 
-    { "menuID": 6, "itemName": "Hamburger", "itemIngredients": "()", "itemPrice": 100}, 
-    { "menuID": 7, "itemName": "Cheese Burger","itemIngredients": "()", "itemPrice": 110}, 
-    { "menuID": 8, "itemName": "Bacon Burger","itemIngredients": "()", "itemPrice": 120}, 
-    { "menuID": 9, "itemName": "Double Burger", "itemIngredients": "()", "itemPrice": 150}, 
-    { "menuID": 10, "itemName": "Royal Burger", "itemIngredients": "()", "itemPrice": 145}
+    { "menuID": 0, "itemName": "", "itemIngredients": "()", "itemPrice": 100}, 
+    { "menuID": 1, "itemName": "", "itemIngredients": "()", "itemPrice": 110},
+    { "menuID": 2, "itemName": "", "itemIngredients": "()", "itemPrice": 120}, 
+    { "menuID": 3, "itemName": "", "itemIngredients": "()", "itemPrice": 100}, 
+    { "menuID": 4, "itemName": "", "itemIngredients": "()", "itemPrice": 145}, 
+    { "menuID": 5, "itemName": "", "itemIngredients": "()", "itemPrice": 110}, 
+    { "menuID": 6, "itemName": "", "itemIngredients": "()", "itemPrice": 100}, 
+    { "menuID": 7, "itemName": "","itemIngredients": "()", "itemPrice": 110}, 
+    { "menuID": 8, "itemName": "","itemIngredients": "()", "itemPrice": 120}, 
+    { "menuID": 9, "itemName": "", "itemIngredients": "()", "itemPrice": 150}, 
+    { "menuID": 10, "itemName": "", "itemIngredients": "()", "itemPrice": 145}
     ]
   }
 ]
