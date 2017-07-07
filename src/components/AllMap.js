@@ -84,6 +84,9 @@ class InitialMap extends Component {
                         <Text style={styles.calloutTitleStyle}>{burger.title}</Text>
                         <Text style={styles.calloutWorkHoursStyle}>Работи: {burger.open}</Text>
                         <Text style={styles.calloutDescriptionStyle}>Опис: {burger.description}</Text>
+                        <View>
+                          <Text style={styles.readMoreStyle}>Дознај повеќе...</Text>
+                        </View>
                     </View>
                 </MapView.Callout>
              </MapView.Marker>);
@@ -118,8 +121,8 @@ const styles = {
         right: 0 
     },
     mapCalloutStyle: {
-        width: 230, 
-        height: 70,
+        width: 250, 
+        height: 100,
         backgroundColor: 'rgba(211, 211, 211, 0.8)', 
         borderColor: '#c44a2c', 
         borderRadius: 5, 
@@ -141,6 +144,14 @@ const styles = {
         flex: 1,
         paddingLeft: 5,
         color: '#181817'
+    },
+    readMoreStyle: {
+        color: '#c44a2c',
+        fontWeight: 'bold',
+        textAlign: 'right',
+        fontSize: 15,
+        paddingBottom: 5,
+        paddingRight: 5,
     }
 };
 
