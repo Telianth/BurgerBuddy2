@@ -139,7 +139,7 @@ const styles = {
     },
     mapCalloutStyle: {
         width: 250, 
-        height: 100,
+        height: 150,
         backgroundColor: 'rgba(211, 211, 211, 0.8)', 
         borderColor: '#c44a2c', 
         borderRadius: 5, 
