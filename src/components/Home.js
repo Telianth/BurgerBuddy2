@@ -1,13 +1,12 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, Image } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import { CardSection, Button } from './common';
-import LocalImage from './LocalImage';
 
  const Home = () => (
     <View style={{ flex: 1 }}>
       <CardSection style={styles.imageContainerStyle}>
-          <LocalImage originalWidth={583} originalHeight={888} source={require('../Images/BurgerInitial.jpg')} />
+          <Image style={{ flex: 1, height: null, width: null, resizeMode: 'contain' }} source={require('../Images/BurgerInitial.jpg')} />
       </CardSection>
       <CardSection style={styles.buttonContainerStyle}>
           <Button onPress={() => Actions.nearby({})}>Бургери во Близина</Button>

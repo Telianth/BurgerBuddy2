@@ -83,7 +83,7 @@ class InitialMap extends Component {
                     <View style={styles.mapCalloutStyle}>
                         <Text style={styles.calloutTitleStyle}>{burger.title}</Text>
                         <Text style={styles.calloutWorkHoursStyle}>Работи: {burger.open}</Text>
-                        <Text style={styles.calloutDescriptionStyle}>Опис: {burger.description}</Text>
+                       <Text style={styles.calloutAdressStyle}>Адреса: {burger.adress}</Text>
                         <View>
                           <Text style={styles.readMoreStyle}>Дознај повеќе...</Text>
                         </View>
@@ -140,7 +140,7 @@ const styles = {
         paddingLeft: 5,
         color: '#181817'
     },
-    calloutDescriptionStyle: {
+    calloutAdressStyle: {
         flex: 1,
         paddingLeft: 5,
         color: '#181817'
