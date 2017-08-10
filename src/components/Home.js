@@ -1,19 +1,22 @@
 import React from 'react';
-import { View, Image } from 'react-native';
+import { View, Image, } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import { CardSection, Button } from './common';
 
- const Home = () => (
+ const Home = () => {
+
+   return (
     <View style={{ flex: 1 }}>
       <CardSection style={styles.imageContainerStyle}>
-          <Image style={{ flex: 1, height: null, width: null, resizeMode: 'contain' }} source={require('../Images/BurgerInitial.jpg')} />
+          <Image style={{ flex: 1, height: null, width: null, resizeMode: 'contain' }} source={require('../Images/BurgerInitial.png')} />
       </CardSection>
       <CardSection style={styles.buttonContainerStyle}>
           <Button onPress={() => Actions.nearby({})}>Бургери во Близина</Button>
           <Button onPress={() => Actions.all({})}>Бургери Скопје</Button>
        </CardSection>
    </View>
-  ); 
+   );
+ }; 
 
 const styles = {
   imageContainerStyle: {

@@ -11,7 +11,7 @@ const ASPECT_RATIO = width / height;
 const LATTITUDE_DELTA = 0.2092;
 const LONGITUDE_DELTA = LATTITUDE_DELTA * ASPECT_RATIO;
 
-class InitialMap extends Component {
+class AllMap extends Component {
     state = {
         initialRegion: {
             latitude: 41.9960995,
@@ -47,7 +47,7 @@ class InitialMap extends Component {
             this.setState({ markerPosition: initialRegion });
         }, 
         (error) => alert(JSON.stringify(error), Actions.home({ type: 'reset' })),
-        { enableHighAccuracy: true, timeout: 7000, maximumAge: 1000 });
+        { enableHighAccuracy: false, timeout: 5000, maximumAge: 100 });
 
         this.watchID = navigator.geolocation.watchPosition((position) => {
             const lat = parseFloat(position.coords.latitude);
@@ -155,4 +155,4 @@ const styles = {
     }
 };
 
-export default InitialMap;
+export default AllMap;

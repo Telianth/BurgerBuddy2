@@ -14,8 +14,8 @@ const LONGITUDE_DELTA = LATTITUDE_DELTA * ASPECT_RATIO;
 class NearbyMap extends Component {
     state = {
         initialRegion: {
-            latitude: null,
-            longitude: null,
+            latitude: 41.9960995,
+            longitude: 21.4303442,
             latitudeDelta: LATTITUDE_DELTA,
             longitudeDelta: LONGITUDE_DELTA
         },
@@ -55,7 +55,7 @@ class NearbyMap extends Component {
             this.setState({ circleCenter: initialRegion });
         }, 
         (error) => alert(JSON.stringify(error), Actions.home({ type: 'reset' })),
-        { enableHighAccuracy: true, timeout: 10000, maximumAge: 1000 });
+        { enableHighAccuracy: false, timeout: 8000, maximumAge: 1000 });
 
         this.watchID = navigator.geolocation.watchPosition((position) => {
             const lat = parseFloat(position.coords.latitude);
