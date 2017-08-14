@@ -1,9 +1,9 @@
 package com.burgerbuddy2;
 
 import android.app.Application;
-
 import com.facebook.react.ReactApplication;
-import com.joshblour.reactnativepermissions.ReactNativePermissionsPackage;
+import com.airbnb.android.react.maps.MapsPackage;
+import com.airbnb.android.react.maps.MapsPackage;
 import com.airbnb.android.react.maps.MapsPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
@@ -20,18 +20,16 @@ public class MainApplication extends Application implements ReactApplication {
     public boolean getUseDeveloperSupport() {
       return BuildConfig.DEBUG;
     }
-
+    
     @Override
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-            new ReactNativePermissionsPackage(),
             new MapsPackage()
       );
     }
-  };
-
-  @Override
+  }; 
+  @Override 
   public ReactNativeHost getReactNativeHost() {
     return mReactNativeHost;
   }
