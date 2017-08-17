@@ -1,34 +1,46 @@
 import React from 'react';
-import { View, Image, } from 'react-native';
+import { Image, } from 'react-native';
+import { Container, Footer, List, ListItem, Button, Icon, Text, Content, CardItem, Left, Body, Thumbnail } from 'native-base';
 import { Actions } from 'react-native-router-flux';
-import { CardSection, Button } from './common';
 
  const Home = () => {
+   const { footerStyle, buttonStyle, iconStyle, buttonTextstyle } = styles;
 
    return (
-    <View style={{ flex: 1 }}>
-      <CardSection style={styles.imageContainerStyle}>
-          <Image style={{ flex: 1, height: null, width: null, resizeMode: 'contain' }} source={require('../Images/BurgerInitial.png')} />
-      </CardSection>
-      <CardSection style={styles.buttonContainerStyle}>
-          <Button onPress={() => Actions.nearby({})}>Бургери во Близина</Button>
-          <Button onPress={() => Actions.all({})}>Бургери Скопје</Button>
-       </CardSection>
-   </View>
+    <Container>
+      <CardItem body style={{ flex: 10 }}>
+          <Image style={{ flex: 1, resizeMode: 'contain' }} source={require('../Images/BurgerInitial.png')} />
+      </CardItem>
+      <Footer style={footerStyle}>
+          <Button iconLeft rounded bordered style={buttonStyle} onPress={() => Actions.nearby({})}>
+            <Icon name='md-locate' style={iconStyle} />
+            <Text style={buttonTextstyle} >Бургери во Близина</Text>
+          </Button>
+          <Button iconLeft rounded bordered style={buttonStyle} onPress={() => Actions.all({})}>
+            <Icon name='md-globe' style={iconStyle} />
+            <Text style={buttonTextstyle}>Бургери Скопје</Text>
+          </Button>
+       </Footer>
+   </Container>
    );
  }; 
 
 const styles = {
-  imageContainerStyle: {
-      flex: 10,
-      borderBottomWidth: 0,
-      alignSelf: 'center',
+  footerStyle: { 
+    backgroundColor: '#ddd', 
+    padding: 3 
   },
-  buttonContainerStyle: {
-    borderBottomWidth: 0,
-    borderTopWidth: 1,
-    borderColor: '#888',
-    flex: 1
+  buttonStyle: { 
+    flex: 1, 
+    margin: 1, 
+    borderColor: '#1f1f1f' 
+  },
+  iconStyle: { 
+    color: '#1f1f1f', 
+    size: 29 
+  },
+  buttonTextstyle: { 
+    color: 'd3d3d3' 
   }
 };
 
