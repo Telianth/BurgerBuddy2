@@ -1,9 +1,16 @@
+/**
+ * import libraries
+ */
 import React, { Component } from 'react';
 import { Dimensions, View, Text } from 'react-native';
 import { Actions } from 'react-native-router-flux';
+import axios from 'axios';
 import MapView from 'react-native-maps';
-import data from '../Database/BurgerList.json';
 
+/**
+ * this component renders a Map view
+ * that contains all data from the API 
+ */
 const { width, height } = Dimensions.get('window');
 
 
@@ -12,6 +19,9 @@ const LATTITUDE_DELTA = 0.2092;
 const LONGITUDE_DELTA = LATTITUDE_DELTA * ASPECT_RATIO;
 
 class AllMap extends Component {
+    /**
+     * initial state of the component.
+     */
     state = {
         initialRegion: {
             latitude: 41.9960995,
@@ -26,12 +36,24 @@ class AllMap extends Component {
         burgers: []
     };
 
+    /**
+     * Watch for the user's position
+     */
     watchID: ?number = null;
 
-        componentWillMount() {
-        return this.setState({ burgers: data });
-    }    
+    /**
+     * http request to an external API before the component is rendered
+     * The state of the component is then updated with the recieved data
+     */
+    componentWillMount() {
+        axios.get('https://api.myjson.com/bins/14b53h')
+        .then(response => this.setState({ burgers: response.data }));
+    }  
 
+    /**
+     * determining the users position via device's GPS once the component is mounted
+     * @param {string} positon - latitude and longitude coordnates
+     */
     componentDidMount() {
         navigator.geolocation.getCurrentPosition((position) => {
             const lat = parseFloat(position.coords.latitude);
@@ -44,8 +66,14 @@ class AllMap extends Component {
                 longitudeDelta: LONGITUDE_DELTA
             };
             
+            /**
+             * Updating the state of the user's position with the new data
+             */
             this.setState({ markerPosition: initialRegion });
-        }, 
+        },
+        /**
+        * Error handling and additonal locator's parameters
+        */ 
         (error) => alert(JSON.stringify(error), Actions.home({ type: 'reset' })),
         { enableHighAccuracy: false, timeout: 5000, maximumAge: 100 });
 
@@ -60,15 +88,25 @@ class AllMap extends Component {
                 longitudeDelta: LONGITUDE_DELTA
             };
 
-          
+        /**
+        * updating the state with the user' new location
+        */
             this.setState({ markerPosition: lastRegion });
         });
     }
     
+    /**
+     * clearing the location watch when the component is not in use
+     */
     componentWillUnmount() {
         navigator.geolocation.clearWatch(this.watchID);
     }
 
+    /**
+     * Helper method that renders the markers on the map loaded from the API
+     * @param {object} burger - single burger joint loaded from the API to be rendered
+     * Tapping on the marker leads to a new view (BurgerPlace.js) containing additional data 
+     */
      renderMarkers() {
          return this.state.burgers.map(burger =>
              <MapView.Marker 
@@ -92,6 +130,9 @@ class AllMap extends Component {
              </MapView.Marker>);
     }    
 
+    /**
+     * rendering Markers on screen
+     */
     render() {
         return (
 
@@ -110,6 +151,9 @@ class AllMap extends Component {
     }
 }
 
+/**
+  * object containing the stylings
+  */
 const styles = {
     mapViewStyle: {
         flex: 1,

@@ -1,9 +1,16 @@
+/**
+ * import libraries
+ */
 import React, { Component } from 'react';
 import { Dimensions, View, Text, } from 'react-native';
 import MapView from 'react-native-maps';
 import { Actions } from 'react-native-router-flux';
-import data from '../Database/BurgerList.json';
+import axios from 'axios';
 
+/**
+* This component renders Map view with locations
+* within 1km of the user's position.
+*/
 const { width, height } = Dimensions.get('window');
 
 
@@ -12,6 +19,9 @@ const LATTITUDE_DELTA = 0.0322;
 const LONGITUDE_DELTA = LATTITUDE_DELTA * ASPECT_RATIO;
 
 class NearbyMap extends Component {
+    /**
+     * initial state of the component.
+     */
     state = {
         initialRegion: {
             latitude: 41.9960995,
@@ -31,13 +41,24 @@ class NearbyMap extends Component {
          burgers: []
 
     };
-
+    /**
+     * Watch for the user's position
+     */
     watchID: ?number = null;
 
+    /**
+     * http request to an external API before the component is rendered
+     * The state of the component is then updated with the recieved data
+     */
     componentWillMount() {
-        return this.setState({ burgers: data });
+        axios.get('https://api.myjson.com/bins/14b53h')
+        .then(response => this.setState({ burgers: response.data }));
     }    
 
+    /**
+     * determining the users position via device's GPS once the component is mounted
+     * @param {string} positon - latitude and longitude coordnates
+     */
     componentDidMount() {
         navigator.geolocation.getCurrentPosition((position) => {
             const lat = parseFloat(position.coords.latitude);
@@ -50,13 +71,22 @@ class NearbyMap extends Component {
                 longitudeDelta: LONGITUDE_DELTA
             };
 
+            /**
+             * Updating the state with the new data
+             */
             this.setState({ initialPosition: initialRegion });
             this.setState({ markerPosition: initialRegion });
             this.setState({ circleCenter: initialRegion });
         }, 
+        /**
+         * Error handling and additonal locator's parameters
+         */
         (error) => alert(JSON.stringify(error), Actions.home({ type: 'reset' })),
         { enableHighAccuracy: false, timeout: 8000, maximumAge: 1000 });
 
+        /**
+         * updating the state with the user' new location
+         */
         this.watchID = navigator.geolocation.watchPosition((position) => {
             const lat = parseFloat(position.coords.latitude);
             const long = parseFloat(position.coords.longitude);
@@ -74,11 +104,18 @@ class NearbyMap extends Component {
         });
     }
     
+    /**
+     * clearing the location watch when the component is not in use
+     */
     componentWillUnmount() {
         navigator.geolocation.clearWatch(this.watchID);
     } 
 
-
+    /**
+     * Helper method that renders the markers on the map loaded from the API
+     * @param {object} burger - single burger joint loaded from the API to be rendered
+     * Tapping on the marker leads to a new view (BurgerPlace.js) containing additional data 
+     */
     renderMarkers() {
       return this.state.burgers.map(burger =>
        <MapView.Marker
@@ -102,7 +139,9 @@ class NearbyMap extends Component {
            </MapView.Callout>
        </MapView.Marker>);
     } 
-
+    /**
+     * rendering Markers on screen
+     */
     render() {
         return (
             <View style={{ flex: 1 }}>
@@ -127,6 +166,9 @@ class NearbyMap extends Component {
     }
 }
 
+/**
+  * object containing the stylings
+  */
 const styles = {
     mapViewStyle: {
         flex: 1,
