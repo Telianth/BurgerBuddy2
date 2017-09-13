@@ -56,10 +56,9 @@ class AnimatedHome extends Component {
               </Animated.View>
               <Animated.View style={{width: size * 2, height: size }}>
                 <CardItem style={{ backgroundColor: 'none' }}>
-                  <Button iconLeft rounded bordered style={buttonStyle} onPress={() => Actions.placelist({})}>
-                    <Icon name='md-list' style={iconStyle} />
-                    <Text style={buttonTextstyle}>Листа на локали</Text>
-                  </Button>
+                  <HomeButton iconName='md-list' onPress={() => setTimeout(() => Actions.placelist({}), 350)}>
+                    Листа на локали
+                  </HomeButton>
                 </CardItem>
             </Animated.View>
           </Card>  

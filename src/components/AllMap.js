@@ -104,24 +104,24 @@ class AllMap extends Component {
 
     /**
      * Helper method that renders the markers on the map loaded from the API
-     * @param {object} burger - single burger joint loaded from the API to be rendered
+     * @param {object} item - single burger joint loaded from the API to be rendered
      * Tapping on the marker leads to a new view (BurgerPlace.js) containing additional data 
      */
      renderMarkers() {
-         return this.state.burgers.map(burger =>
+         return this.state.burgers.map(item =>
              <MapView.Marker 
-             key={burger.id}
-             coordinate={burger.latlng}
+             key={item.id}
+             coordinate={item.latlng}
              image={require('../Images/BurgerIcon2.png')}
              >
                 <MapView.Callout 
                  tooltip
-                 onPress={() => Actions.burgerplace({ burger, title: burger.title, })}
+                 onPress={() => Actions.burgerplace({ item, title: item.title, })}
                 >
                     <View style={styles.mapCalloutStyle}>
-                        <Text style={styles.calloutTitleStyle}>{burger.title}</Text>
-                        <Text style={styles.calloutWorkHoursStyle}>Работи: {burger.open}</Text>
-                       <Text style={styles.calloutAdressStyle}>Адреса: {burger.adress}</Text>
+                        <Text style={styles.calloutTitleStyle}>{item.title}</Text>
+                        <Text style={styles.calloutWorkHoursStyle}>Работи: {item.open}</Text>
+                       <Text style={styles.calloutAdressStyle}>Адреса: {item.adress}</Text>
                         <View>
                           <Text style={styles.readMoreStyle}>Дознај повеќе...</Text>
                         </View>
@@ -167,7 +167,7 @@ const styles = {
     mapCalloutStyle: {
         width: 250, 
         height: 150,
-        backgroundColor: 'rgba(211, 211, 211, 0.8)', 
+        backgroundColor: 'rgba(241, 136, 5, 0.5)', 
         borderColor: '#c44a2c', 
         borderRadius: 5, 
         borderWidth: 1
@@ -190,7 +190,7 @@ const styles = {
         color: '#181817'
     },
     readMoreStyle: {
-        color: '#c44a2c',
+        color: 'rgba(200, 70, 48, 1)',
         fontWeight: 'bold',
         textAlign: 'right',
         fontSize: 15,

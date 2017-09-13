@@ -47,30 +47,30 @@ const styles = {
     flex: 1, 
     margin: 1, 
     borderColor: '#c44a2c',
-    backgroundColor: 'rgb(56, 56, 56)',
+    backgroundColor: 'rgba(200, 70, 48, 0.8)',
     justifyContent: 'center',
 
   },
   buttonStyle: { 
     flex: 1, 
     margin: 1, 
-    borderColor: '#c44a2c',
-    backgroundColor: 'rgba(211, 211, 211, 0.8)',
+    borderColor: '#c84630',
+    backgroundColor: 'rgba(241, 136, 5, 0.8)',
     justifyContent: 'center',
   },
   pressedIconStyle: {
-    color: 'rgba(211, 211, 211, 1)',
+    color: 'rgb(240, 215, 97)',
     size: 29
   },
   iconStyle: { 
-    color: '#1f1f1f', 
+    color: 'rgba(58, 51, 53, 1)', 
     size: 29 
   },
   pressedButtonTextStyle: {
-    color: 'rgba(211, 211, 211, 1)'
+    color: 'rgb(240, 215, 97)'
   },
   buttonTextstyle: { 
-    color: '#3f3f3f' 
+    color: 'rgba(58, 51, 53, 1)' 
   }
 };
 

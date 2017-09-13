@@ -21,9 +21,9 @@ import AnimatedHome from './AnimatedHome';
 const RouterComponent = () => (
 
         <Router
-         sceneStyle={{ paddingTop: 50, backgroundColor: '#ddd' }}
-         navigationBarStyle={{ backgroundColor: '#ddd' }}
-         titleStyle={{ color: '#181817' }}
+         sceneStyle={{ paddingTop: 50 }}
+         navigationBarStyle={{ backgroundColor: 'rgb(228, 82, 11)' }}
+         titleStyle={{ color: 'rgba(58, 51, 53, 1)' }}
         >
             <Scene
             initial

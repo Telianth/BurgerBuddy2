@@ -3,6 +3,7 @@ import { Linking, } from 'react-native';
 import { Container, Footer, ListItem, Button, Icon, Text, Content, CardItem, Left, Body, Thumbnail } from 'native-base';
 import Communications from 'react-native-communications';
 import { CardSection, } from './common';
+import HomeButton from './HomeButton';
 
 /**
  * This component renders the data from the selected burger joint in the 
@@ -10,7 +11,7 @@ import { CardSection, } from './common';
  * @param {*} props - the data recieved by react-native-router-flux
  */
 const BurgerPlace = (props) => {
-  const burgerPlace = props.burger;
+  const burgerPlace = props.item;
   const { open, description, fburl, menu, phone, logo, title, adress } = burgerPlace;
   const {
     headerWrapperStyle,
@@ -41,7 +42,7 @@ const BurgerPlace = (props) => {
     }
     return menu.map(item =>
     
-      <ListItem onPress={() => console.log(this.props)} key={item.menuID} style={listItemStyle} >
+      <ListItem onPress={() => console.log(props)} key={item.menuID} style={listItemStyle} >
         <Left>
         <Thumbnail small source={require('../Images/Burger-icon-colorless.png')} />
         <Body>
@@ -74,16 +75,16 @@ const renderFBButton = () => {
   if (!fburl) return null;
       
   return (
-    <Button
+    <HomeButton
+      iconName='logo-facebook'
       rounded
       style={FBButtonStyle}
       onPress={() => { 
         return Linking.openURL(fburl);
       }}
     >
-      <Icon name="logo-facebook" iconLeft />
-      <Text>Facebook</Text>
-    </Button>
+    Facebook
+    </HomeButton>
       );
     };
     
@@ -98,7 +99,8 @@ const renderPhoneButton = () => {
   if (!phone) return null;
 
     return (
-      <Button
+      <HomeButton
+        iconName="md-call"
         rounded
         style={orderButtonStyle} 
         onPress={() => { 
@@ -106,9 +108,8 @@ const renderPhoneButton = () => {
         }
         }
       >
-        <Icon name="call" />
-        <Text>Нарачка</Text>
-      </Button> 
+      Нарачка
+      </HomeButton> 
       );
   };
 const renderFooter = () => {
@@ -172,7 +173,8 @@ const styles = {
     fontWeight: 'bold',
     alignSelf: 'center', 
     borderBottomWidth: 2, 
-    borderColor: '#1F1F1F', 
+    borderColor: '#1F1F1F',
+    color: 'rgba(58, 51, 53, 1)' 
   },
   menuContainerStyle: { 
     flex: 4, 
