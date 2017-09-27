@@ -4,6 +4,8 @@ import { Container, Footer, ListItem, Button, Icon, Text, Content, CardItem, Lef
 import Communications from 'react-native-communications';
 import { CardSection, } from './common';
 import HomeButton from './HomeButton';
+import * as Animatable from 'react-native-animatable';
+
 
 /**
  * This component renders the data from the selected burger joint in the 
@@ -35,23 +37,28 @@ const BurgerPlace = (props) => {
   const renderMenu = () => {
     if (menu.length === 0) {
       return ( 
-      <Content>
+      <Content style={{ backgroundColor: 'rgba(217, 93, 57, 0.4)' }}>
+        <Animatable.View animation='bounceInUp' delay={220}>
         <Text note style={menuUnavailableStyle}>Менито не е достапно во моментов</Text>
+        </Animatable.View>
       </Content>
       );
     }
     return menu.map(item =>
-    
+      <Animatable.View animation='bounceInUp' delay={220}>
       <ListItem onPress={() => console.log(props)} key={item.menuID} style={listItemStyle} >
         <Left>
-        <Thumbnail small source={require('../Images/Burger-icon-colorless.png')} />
+        <Thumbnail small source={require('../Images/Burger-icon-color.png')} />
         <Body>
         <Text style={menuItemNameStyle}>{item.itemName}</Text>
         <Text note style={menuItemIngredientsStyle}>Состoјки: {item.itemIngredients}</Text>
         </Body>
+        <Animatable.View animation='fadeInDown' delay={450}>
         <Text style={menuItemPriceTextStyle}>{item.itemPrice} ден.</Text>
+        </Animatable.View>
         </Left>
       </ListItem>
+      </Animatable.View>
     );
   };
 
@@ -75,6 +82,7 @@ const renderFBButton = () => {
   if (!fburl) return null;
       
   return (
+    <Animatable.View animation='fadeInRight' delay={400} >
     <HomeButton
       iconName='logo-facebook'
       rounded
@@ -85,6 +93,7 @@ const renderFBButton = () => {
     >
     Facebook
     </HomeButton>
+    </Animatable.View>
       );
     };
     
@@ -99,6 +108,7 @@ const renderPhoneButton = () => {
   if (!phone) return null;
 
     return (
+      <Animatable.View animation='fadeInLeft' delay={400} >
       <HomeButton
         iconName="md-call"
         rounded
@@ -109,7 +119,8 @@ const renderPhoneButton = () => {
         }
       >
       Нарачка
-      </HomeButton> 
+      </HomeButton>
+      </Animatable.View> 
       );
   };
 const renderFooter = () => {
@@ -139,7 +150,7 @@ const renderFooter = () => {
       <CardSection style={menuContainerStyle}>
         <CardSection style={menuTitleContainerStyle}>
         <Text style={titleMenuStyle}>Мени:</Text>
-          <Content>
+          <Content style={{ borderBottomWidth: 0 }}>
              {renderMenu()}
           </Content>
        </CardSection>
@@ -179,42 +190,41 @@ const styles = {
   menuContainerStyle: { 
     flex: 4, 
     padding: 0, 
-    borderBottomWidth: 1 
+    
   },
   menuTitleContainerStyle: { 
     flex: 1, 
     flexDirection: 'column', 
-    padding: 0 
+    padding: 0,
+    backgroundColor: 'rgba(228, 82, 11, 0.4)'  
   },
   headerWrapperStyle: {
-    backgroundColor: '#ddd',
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 3 },
     shadowOpacity: 0.20,
     shadowRadius: 2,
     elevation: 1,
+    backgroundColor: 'rgba(228, 82, 11, 0.7)'
   },
   listItemStyle: { 
-    flexDirection: 'column', 
-    backgroundColor: '#ddd' 
+    flexDirection: 'column',
+    backgroundColor: 'none' 
   },
   FBButtonStyle: {
-     backgroundColor: '#3B5998', 
      flex: 1, 
      justifyContent: 'center', 
      position: 'relative', 
      margin: 1 
   },
   orderButtonStyle: { 
-    backgroundColor: '#5FBB3F', 
     flex: 1, 
     justifyContent: 'center', 
     position: 'relative', 
     margin: 1 
   },
   footerStyle: { 
-    backgroundColor: '#ddd', 
-    padding: 3 
+    padding: 3,
+    backgroundColor: 'rgba(228, 82, 11, 1)'
   }
   
 };

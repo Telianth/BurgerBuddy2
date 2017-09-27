@@ -6,6 +6,7 @@ import { Dimensions, View, Text, } from 'react-native';
 import MapView from 'react-native-maps';
 import { Actions } from 'react-native-router-flux';
 import axios from 'axios';
+import Permissions from 'react-native-permissions'; 
 
 /**
 * This component renders Map view with locations
@@ -51,9 +52,35 @@ class NearbyMap extends Component {
      * The state of the component is then updated with the recieved data
      */
     componentWillMount() {
+        this._alertForLocationPermission();
+        Permissions.check('location')
+        .then(response => {
+          //response is one of: 'authorized', 'denied', 'restricted', or 'undetermined'
+          this.setState({ locationPermission: response });
+        });
+        this._alertForPhotosPermission
         axios.get('https://api.myjson.com/bins/14b53h')
         .then(response => this.setState({ burgers: response.data }));
-    }    
+    }
+    _requestPermission() {
+        Permissions.request('location')
+          .then(response => {
+            //returns once the user has chosen to 'allow' or to 'not allow' access
+            //response is one of: 'authorized', 'denied', 'restricted', or 'undetermined'
+            this.setState({ locationPermission: response })
+          });
+      }
+      _alertForLocationPermission() {
+          Alert.alert(
+          'Can we access your location?',
+          [
+            {text: 'No way', onPress: () => alert('permission denied'), style: 'cancel'},
+            this.state.locationPermission === 'undetermined'?
+              {text: 'OK', onPress: this._requestPermission.bind(this)}
+              : {text: 'Open Settings', onPress: Permissions.openSettings}
+          ]
+        )
+      }    
 
     /**
      * determining the users position via device's GPS once the component is mounted

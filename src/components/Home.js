@@ -12,7 +12,7 @@ import { Actions } from 'react-native-router-flux';
 * a separate view via router flux
 */
  const Home = () => {
-   const { footerStyle, buttonStyle, iconStyle, buttonTextstyle } = styles;
+   const { buttonStyle, iconStyle, buttonTextstyle } = styles;
 
    return (
     <Container>
@@ -44,10 +44,6 @@ import { Actions } from 'react-native-router-flux';
   * object containing the stylings
   */
 const styles = {
-  footerStyle: { 
-    backgroundColor: '#ddd', 
-    padding: 3 
-  },
   buttonStyle: { 
     flex: 1, 
     margin: 1, 
@@ -57,7 +53,7 @@ const styles = {
   },
   iconStyle: { 
     color: '#1f1f1f', 
-    size: 29 
+    fontSize: 29 
   },
   buttonTextstyle: { 
     color: 'd3d3d3' 

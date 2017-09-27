@@ -33,30 +33,29 @@ class AnimatedHome extends Component {
   }
 
    render() {
-    const { buttonStyle, iconStyle, buttonTextstyle, } = styles;
     const { fadeAnim, size } = this.state;
 
     return (
       <Container>
         <Animated.Image source={require('../Images/burgersplash.jpg')} resizeMode='cover' style={{ opacity: fadeAnim, flex: 1, width: null, height: null }}>
-          <Card style={{ justifyContent: 'center', backgroundColor: 'none' }}>
+          <Card style={{ justifyContent: 'center', backgroundColor: 'transparent' }}>
               <Animated.View style={{ width: size * 2, height: size }}>
-                <CardItem style={{ backgroundColor: 'none' }}>  
-                  <HomeButton iconName='md-locate' onPress={() => setTimeout(() => Actions.nearby({}), 350)}>
+                <CardItem style={{ backgroundColor: 'transparent' }}>  
+                  <HomeButton iconName='md-locate' onPress={() => setTimeout(() => Actions.nearby({}), 300)}>
                       Бургери во Близина
                   </HomeButton>
                 </CardItem>
               </Animated.View>
               <Animated.View style={{ width: size * 2, height: size }}>
-                <CardItem style={{ backgroundColor: 'none' }}>  
-                  <HomeButton iconName='md-globe' onPress={() => setTimeout(() => Actions.all({}), 350)}>
+                <CardItem style={{ backgroundColor: 'transparent' }}>  
+                  <HomeButton iconName='md-globe' onPress={() => setTimeout(() => Actions.all({}), 300)}>
                     Бургери во Скопје
                   </HomeButton>
                 </CardItem>
               </Animated.View>
-              <Animated.View style={{width: size * 2, height: size }}>
-                <CardItem style={{ backgroundColor: 'none' }}>
-                  <HomeButton iconName='md-list' onPress={() => setTimeout(() => Actions.placelist({}), 350)}>
+              <Animated.View style={{ width: size * 2, height: size }}>
+                <CardItem style={{ backgroundColor: 'transparent' }}>
+                  <HomeButton iconName='md-list' onPress={() => setTimeout(() => Actions.placelist({}), 450)}>
                     Листа на локали
                   </HomeButton>
                 </CardItem>
@@ -66,41 +65,6 @@ class AnimatedHome extends Component {
      </Container>
      );
    }
- }; 
-
- /**
-  * object containing the stylings
-  */
-const styles = {
-  pressedButtonStyle: {
-    flex: 1, 
-    margin: 1, 
-    borderColor: '#c44a2c',
-    backgroundColor: 'rgba(56, 56, 56, 0.8)',
-    justifyContent: 'center',
-
-  },
-  buttonStyle: { 
-    flex: 1, 
-    margin: 1, 
-    borderColor: '#c44a2c',
-    backgroundColor: 'rgba(211, 211, 211, 0.8)',
-    justifyContent: 'center',
-  },
-  pressedIconStyle: {
-    color: 'white',
-    size: 29
-  },
-  iconStyle: { 
-    color: '#1f1f1f', 
-    size: 29 
-  },
-  pressedButtonTextStyle: {
-    color: 'white'
-  },
-  buttonTextstyle: { 
-    color: 'd3d3d3' 
-  }
-};
+ } 
 
 export default AnimatedHome;
